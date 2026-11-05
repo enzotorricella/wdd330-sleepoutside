@@ -28,15 +28,15 @@ export default class ProductList {
   }
 
   async init() {
-    const list = await this.dataSource.getData();
-    this.renderList(list);
+    const products = await this.dataSource.getData();
+    this.renderList(products);
   }
 
-  renderList(list) {
+  renderList(products) {
     renderListWithTemplate(
       productCardTemplate,
       this.listElement,
-      list,
+      products,
       "afterbegin",
       true,
     );

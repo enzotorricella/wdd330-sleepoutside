@@ -1,6 +1,6 @@
-function convertToJson(res) {
-  if (res.ok) {
-    return res.json();
+function convertToJson(response) {
+  if (response.ok) {
+    return response.json();
   } else {
     throw new Error("Bad Response");
   }

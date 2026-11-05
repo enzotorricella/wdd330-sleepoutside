@@ -31,15 +31,15 @@ export function getParam(param) {
 }
 
 export function renderListWithTemplate(
-  template,
+  templateFunction,
   parentElement,
-  list,
+  items,
   position = "afterbegin",
   clear = false,
 ) {
-  const htmlStrings = list.map(template);
+  const renderedItems = items.map(templateFunction);
   if (clear) {
     parentElement.innerHTML = "";
   }
-  parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
+  parentElement.insertAdjacentHTML(position, renderedItems.join(""));
 }
