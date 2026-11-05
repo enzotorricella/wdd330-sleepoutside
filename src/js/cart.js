@@ -5,8 +5,9 @@ function renderCartContents() {
   const cartList = document.querySelector(".product-list");
 
   if (cartItems.length === 0) {
-    cartList.innerHTML =
-      '<li class="empty-cart">Your cart is empty. Add a product to start shopping.</li>';
+    cartList.innerHTML = `<li class="empty-cart">
+      Your cart is empty. Add a product to start shopping.
+    </li>`;
     return;
   }
 
