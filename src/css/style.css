@@ -241,6 +241,14 @@ button {
   grid-column: 3;
 }
 
+.empty-cart {
+  width: 100%;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--dark-grey);
+  border: 1px solid var(--light-grey);
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
