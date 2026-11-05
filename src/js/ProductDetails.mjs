@@ -40,7 +40,16 @@ function productDetailsTemplate(product) {
   productImage.addEventListener(
     "error",
     () => {
-      productImage.src = "/images/camping-products.jpg";
+      const fallbackImages = {
+        "989CG":
+          "/images/tents/the-north-face-talus-tent-4-person-3-season-in-golden-oak-saffron-yellow~p~985rf_01~320.jpg",
+        "880RT":
+          "/images/tents/marmot-ajax-tent-3-person-3-season-in-pale-pumpkin-terracotta~p~880rr_01~320.jpg",
+      };
+      const fallbackImage = fallbackImages[product.Id];
+      if (fallbackImage) {
+        productImage.src = fallbackImage;
+      }
     },
     { once: true },
   );
